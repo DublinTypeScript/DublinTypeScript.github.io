@@ -1,0 +1,21 @@
+{
+  "name": "dublin-typescript-meetup",
+  "version": "1.0.0",
+  "description": "Dublin typescript meetup website",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "dublin",
+    "typescript",
+    "meetup"
+  ],
+  "author": "Remo H. Jansen",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.2.5",
+    "bootstrap": "^3.3.4",
+    "jquery": "^2.1.4"
+  }
+}
