@@ -1,0 +1,19 @@
+{
+  "name": "Konami.js",
+  "version": "0.0.1",
+  "main": "./konami.js",
+  "dependencies": {
+    "jquery": ">=1.5.0"
+  },
+  "homepage": "https://github.com/remcoder/konami",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "d56dfb38d86809db5ba2dc42feb7885695afae3d"
+  },
+  "_source": "git://github.com/remcoder/konami.git",
+  "_target": "~0.0.1",
+  "_originalSource": "konami",
+  "_direct": true
+}

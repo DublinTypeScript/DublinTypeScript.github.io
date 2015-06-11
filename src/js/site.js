@@ -8,78 +8,91 @@ window.requestAnimFrame = (function(){
           };
 })();
 
-var Skyline = (function() {
+(function() {
 
-  var cloudSizes = ["small", "medium", "large"];
+  // animation logic
+  var Skyline = (function() {
 
-  var clouds = {
-    small : '<div class="cloud cloud-small">&nbsp;</div>',
-    medium : '<div class="cloud cloud-medium">&nbsp;</div>',
-    large : '<div class="cloud cloud-large">&nbsp;</div>'
-  };
+    var cloudSizes = ["small", "medium", "large"];
 
-  function Skyline(speed, cloudCount, cloudRatio) {
-    this.speed = speed;
-    this.cloudCount = cloudCount;
-    this.cloudRatio = cloudRatio * 100;
-    this.timeSinceLastCloudAdded = this.cloudRatio;
-  };
+    var clouds = {
+      small : '<div class="cloud cloud-small">&nbsp;</div>',
+      medium : '<div class="cloud cloud-medium">&nbsp;</div>',
+      large : '<div class="cloud cloud-large">&nbsp;</div>'
+    };
 
-  Skyline.prototype.render = function() {
+    function Skyline(speed, cloudCount, cloudRatio) {
+      this.speed = speed;
+      this.cloudCount = cloudCount;
+      this.cloudRatio = cloudRatio * 100;
+      this.timeSinceLastCloudAdded = this.cloudRatio;
+    };
 
-    this.timeSinceLastCloudAdded = this.timeSinceLastCloudAdded + 1;
-    var $clouds = $('.cloud');
+    Skyline.prototype.render = function() {
 
-    var notEnoughClouds = $clouds.length < this.cloudCount;
-    var enoughSpaceBetweenClouds = this.timeSinceLastCloudAdded > this.cloudRatio;
+      this.timeSinceLastCloudAdded = this.timeSinceLastCloudAdded + 1;
+      var $clouds = $('.cloud');
 
-    // add a cloud if no clouds and clouds not too close
-    if(notEnoughClouds && enoughSpaceBetweenClouds) {
-      $('.sky').prepend(clouds[cloudSizes[Math.floor(Math.random() * 3)]]);
-      this.timeSinceLastCloudAdded = 0;
-    }
-    // if there are clouds
-    else {
+      var notEnoughClouds = $clouds.length < this.cloudCount;
+      var enoughSpaceBetweenClouds = this.timeSinceLastCloudAdded > this.cloudRatio;
 
-
-      // update clouds
-      for(var i = 0; i < $clouds.length; i++) {
-
-        var $cloud = $($clouds[i]);
-
-        // if clous was just appended set left = 0
-        var left = $cloud.css("left");
-        if(left === "-350px") {
-          var top = Math.floor(Math.random() * 250) + 50;
-          $cloud.css("top", top);
-          $cloud.css("left", -349);
-        }
-        else {
-          // the cloud was previously appended
-          left = left.replace("px","");
-          left = parseInt(left);
-
-          // if cloud is not out of the screen move right
-          if(left < (window.innerWidth + 500)){
-            left = left + this.speed;
-            $cloud.css("left", left);
-          }
-          // if cloud is out of the screen remove it from DOM
-          else {
-            $cloud.remove();
-          }
-        }
+      // add a cloud if no clouds and clouds not too close
+      if(notEnoughClouds && enoughSpaceBetweenClouds) {
+        $('.sky').prepend(clouds[cloudSizes[Math.floor(Math.random() * 3)]]);
+        this.timeSinceLastCloudAdded = 0;
       }
+      // if there are clouds
+      else {
 
-    }
-  };
 
-  return Skyline;
-})();
+        // update clouds
+        for(var i = 0; i < $clouds.length; i++) {
 
-var skyline = new Skyline(1,5,4);
+          var $cloud = $($clouds[i]);
 
-(function animloop() {
-  requestAnimFrame(animloop);
-  skyline.render();
+          // if clous was just appended set left = 0
+          var left = $cloud.css("left");
+          if(left === "-350px") {
+            var top = Math.floor(Math.random() * 250) + 50;
+            $cloud.css("top", top);
+            $cloud.css("left", -349);
+          }
+          else {
+            // the cloud was previously appended
+            left = left.replace("px","");
+            left = parseInt(left);
+
+            // if cloud is not out of the screen move right
+            if(left < (window.innerWidth + 500)){
+              left = left + this.speed;
+              $cloud.css("left", left);
+            }
+            // if cloud is out of the screen remove it from DOM
+            else {
+              $cloud.remove();
+            }
+          }
+        }
+
+      }
+    };
+
+    return Skyline;
+  })();
+
+  // run animation
+  var skyline = new Skyline(1,5,4);
+  (function animloop() {
+    requestAnimFrame(animloop);
+    skyline.render();
+  })();
+
+  // easter egg
+  __konami__.enable(function() {
+    var bg_img = "background: url('./assets/rainbow_cat.png');";
+    var bg_position = "background-size: contain;";
+    var bg_repeat = "background-repeat: no-repeat;";
+    var style = "<style>.cloud{" + bg_img + bg_position + bg_repeat + "}</style>";
+    $("head").append(style);
+  }, { replay: false });
 })();

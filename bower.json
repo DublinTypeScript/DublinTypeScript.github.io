@@ -9,5 +9,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "konami": "~0.0.1"
+  }
 }
