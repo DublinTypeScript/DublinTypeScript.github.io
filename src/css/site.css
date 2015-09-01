@@ -5,10 +5,17 @@ body {
 }
 
 .hero {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1; 
     padding-top: 40px;
     padding-bottom: 95px;
     color: #ffffff;
     text-shadow: 1px 1px #64bcff;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -17,7 +24,6 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 46px;
     font-weight: bold;
-    z-index: 11;
 }
 
 .hero p {
@@ -57,7 +63,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .cloud-small {
