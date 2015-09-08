@@ -104,6 +104,10 @@ html {
   font-size: 18px;
 }
 
+.body ul {
+  font-size: 18px;
+}
+
 .body a {
   color: #ffffff;
   text-decoration: underline;
