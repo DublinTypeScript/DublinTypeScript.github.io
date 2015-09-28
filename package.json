@@ -16,6 +16,7 @@
   "dependencies": {
     "animate.css": "^3.2.5",
     "bootstrap": "^3.3.4",
+    "handlebars": "^4.0.3",
     "jquery": "^2.1.4"
   }
 }

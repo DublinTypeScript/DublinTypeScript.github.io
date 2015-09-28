@@ -1,0 +1,12 @@
+{ 
+	"events" : [
+		{ 
+			"on" : "24th September 2015",
+			"location" : "Ericsson Ireland",
+			"talks" : [
+				{ "title" : "Introducing TypeScript", "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", "link" : "http://bit.ly/1KT90PS" },
+				{ "title" : "Working with #TypeScript @ Ericsson", "name" : "Konstantin Dubrovniy", "at" : "koss_", "link" : "http://bit.ly/1KTQs1V" },
+			]
+		}
+	]
+}

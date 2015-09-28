@@ -1,0 +1,30 @@
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    {{#each events}}
+      <div class="item">
+        <h1>{{on}}</h1>
+        <h2>@ {{location}}</h2>
+        <ul>
+          {{#each talks}}
+            <li>
+              <a href="{{link}}">"{{title}}"</a>
+              by 
+              <a href="https://twitter.com/{{at}}">{{name}}</a>
+            </li>
+          {{/event}}
+        </ul>
+      </div>
+    {{/event}}
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

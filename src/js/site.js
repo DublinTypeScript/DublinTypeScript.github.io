@@ -86,6 +86,15 @@ window.requestAnimFrame = (function(){
     requestAnimFrame(animloop);
     skyline.render();
   })();
+  
+  // render previous meetups
+  $.get("./src/templates/previous_meetups.hbs", function(source) {
+    $.get("./data/previous_meetups.json", function(data) {
+      var template = Handlebars.compile(source);
+      var html = template(data);
+      $('#previous_meetups').html(html);
+    });
+  });
 
   // easter egg
   __konami__.enable(function() {
