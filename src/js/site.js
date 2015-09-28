@@ -93,6 +93,8 @@ window.requestAnimFrame = (function(){
       var template = Handlebars.compile(source);
       var html = template(data);
       $('#previous_meetups').html(html);
+      $('#previous_meetups .item').last().addClass("active");
+      $('#previous_meetups .item').carousel();
     });
   });
 
