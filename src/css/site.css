@@ -127,3 +127,8 @@ html {
 .footer p{
     font-size: 14px;
 }
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  background-repeat: no-repeat;
+}
