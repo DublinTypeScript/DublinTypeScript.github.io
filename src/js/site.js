@@ -133,5 +133,13 @@ function getBookWinnerAsync(meetupId, cb, audit) {
 
 function getBookWinner() {
     var meetupId = "226080932";
-    getBookWinnerAsync(meetupId, function(winner){ console.log(winner); });
+    getBookWinnerAsync(meetupId, function(winner){ 
+      alert("AND THE WINNER IS..." + winner.name + '\n\n' + winner.link); 
+    });
 }
+
+$(document).keypress(function(e) {
+    if(e.which === 119) {
+      getBookWinner();
+    }
+});
