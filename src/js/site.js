@@ -133,7 +133,14 @@ function getBookWinnerAsync(meetupId, cb, audit) {
 
 function getBookWinner() {
     var meetupId = "226080932";
-    getBookWinnerAsync(meetupId, function(winner){ 
+    getBookWinnerAsync(meetupId, function(winner) { 
+      // show easter egg
+      var bg_img = "background: url('./assets/rainbow_cat.png');";
+      var bg_position = "background-size: contain;";
+      var bg_repeat = "background-repeat: no-repeat;";
+      var style = "<style>.cloud{" + bg_img + bg_position + bg_repeat + "}</style>";
+      $("head").append(style);
+      // show winner
       alert("THE WINNER IS...\n\n" + winner.name + '!\n\n' + winner.link); 
     });
 }
