@@ -5,7 +5,7 @@
    "location" : "Ericsson Ireland",
    "talks" : [
     { "title" : "Decorators & metadata reflection", "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", "link" : "http://www.remojansen.com/talks/data/slide.html?slide=typescript_decorators" },
-    { "title" : "Working with TypeScript @ Ericsson", "name" : "Daniel Jimenez Garcia", "at" : "", "link" : "http://www.slideshare.net/DanielJimenezGarcia/unit-testing-typescript" }
+    { "title" : "Working with TypeScript @ Ericsson", "name" : "Daniel Jimenez Garcia", "at" : null, "link" : "http://www.slideshare.net/DanielJimenezGarcia/unit-testing-typescript" }
    ]
   },
   { 
