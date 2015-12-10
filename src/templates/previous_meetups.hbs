@@ -14,7 +14,11 @@
             <li>
               <a href="{{link}}">"{{title}}"</a>
               by 
-              <a href="https://twitter.com/{{at}}">{{name}}</a>
+              {{#if at}}
+                <a href="https://twitter.com/{{at}}">{{name}}</a>
+              {{else}}
+                {{name}}
+              {{/if}}
             </li>
           {{/each}}
         </ul>
