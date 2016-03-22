@@ -4,24 +4,48 @@
    "on" : "9th February 2016",
    "location" : "Aon Centre for Innovation and Analytics (ACIA)",
    "talks" : [
-    { "title" : "React + Redux + TypeScript === ♥", "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", "link" : "http://www.slideshare.net/RemoJansen/react-redux-typescript" },
-    { "title" : "D3 and tableau integration", "name" : "Sijia Li", "at" : null, "link" : "http://www.slideshare.net/RemoJansen/d3-and-tableau-integration" }
+    { 
+     "title" : "React + Redux + TypeScript === ♥", 
+     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", 
+     "link" : "http://www.slideshare.net/RemoJansen/react-redux-typescript" 
+    },
+    { 
+     "title" : "D3 and tableau integration", 
+     "name" : "Sijia Li", "at" : null, 
+     "link" : "http://www.slideshare.net/RemoJansen/d3-and-tableau-integration"
+    }
    ]
   },
   { 
    "on" : "17th November 2015",
    "location" : "Ericsson Ireland",
    "talks" : [
-    { "title" : "Decorators & metadata reflection", "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", "link" : "http://www.remojansen.com/talks/data/slide.html?slide=typescript_decorators" },
-    { "title" : "Unit Testing with TypeScript", "name" : "Daniel Jimenez Garcia", "at" : null, "link" : "http://www.slideshare.net/DanielJimenezGarcia/unit-testing-typescript" }
+    { 
+     "title" : "Decorators & metadata reflection", 
+     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", 
+     "link" : "http://www.remojansen.com/talks/data/slide.html?slide=typescript_decorators" 
+    },
+    { 
+     "title" : "Unit Testing with TypeScript", 
+     "name" : "Daniel Jimenez Garcia", "at" : null, 
+     "link" : "http://www.slideshare.net/DanielJimenezGarcia/unit-testing-typescript" 
+    }
    ]
   },
   { 
    "on" : "24th September 2015",
    "location" : "Ericsson Ireland",
    "talks" : [
-    { "title" : "Introducing TypeScript", "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", "link" : "http://bit.ly/1KT90PS" },
-    { "title" : "Working with TypeScript @ Ericsson", "name" : "Konstantin Dubrovniy", "at" : "koss_", "link" : "http://bit.ly/1KTQs1V" }
+    { 
+     "title" : "Introducing TypeScript", 
+     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", 
+     "link" : "http://bit.ly/1KT90PS" 
+    },
+    { 
+     "title" : "Working with TypeScript @ Ericsson", 
+     "name" : "Konstantin Dubrovniy", "at" : "koss_", 
+     "link" : "http://bit.ly/1KTQs1V"
+    }
    ]
   }
  ]
