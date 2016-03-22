@@ -9,6 +9,8 @@ window.requestAnimFrame = (function(){
 })();
 
 (function() {
+  
+  $("#year").html(new Date().getFullYear());
 
   // animation logic
   var Skyline = (function() {
