@@ -112,7 +112,7 @@ window.requestAnimFrame = (function(){
 
 
 $(document).keypress(function(e) {
-    if(e.which === 72) {
+    if(e.which === 104) {
       $(".fadeInUp").hide();
       $(".fadeInDown").hide();
     }
