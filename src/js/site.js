@@ -111,44 +111,9 @@ window.requestAnimFrame = (function(){
 })();
 
 
-// temp give away
-function getBookWinnerAsync(meetupId, cb, audit) {
-    $.get("http://my-cors-proxy.azurewebsites.net/www.meetup.com/Dublin-TypeScript-Meetup/events/" + meetupId + "/", function(a) { 
-        var people= [];
-        $(a).find(".rsvp-introBlurb h5 a").each(function(i, e) { 
-             if(i !== 0) {
-               people.push({
-                   name : $(e).text(),
-                   link : $(e).attr("href")
-               }); 
-             }
-        });
-        var maxRange = people.length;
-        var index = Math.floor(Math.random() * maxRange);
-        var winner = people[index];
-        if(audit === true) {
-          console.log(people.length, people.map(function(p){ return p.name; }));
-        }
-        cb(winner);
-    });
-}
-
-function getBookWinner() {
-    var meetupId = "226080932";
-    getBookWinnerAsync(meetupId, function(winner) { 
-      // show easter egg
-      var bg_img = "background: url('./assets/rainbow_cat.png');";
-      var bg_position = "background-size: contain;";
-      var bg_repeat = "background-repeat: no-repeat;";
-      var style = "<style>.cloud{" + bg_img + bg_position + bg_repeat + "}</style>";
-      $("head").append(style);
-      // show winner
-      alert("THE WINNER IS...\n\n" + winner.name + '!\n\n' + winner.link); 
-    });
-}
-
 $(document).keypress(function(e) {
-    if(e.which === 119) {
-      getBookWinner();
+    if(e.which === 72) {
+      $(".fadeInUp").hide();
+      $(".fadeInDown").hide();
     }
 });
