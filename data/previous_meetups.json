@@ -5,8 +5,24 @@
    "location" : "Aon Centre for Innovation and Analytics (ACIA)",
    "talks" : [
     { 
+     "title" : "Angular 2 in 60 minutes", 
+     "name" : "Juan Ramos & Pablo Palomar", "at" : "#", 
+     "link" : "https://docs.google.com/presentation/d/1xcXUwEI0kMcOH2iR7OtzSHHqtKjjljrmuaUGWC2EYZg/present" 
+    },
+    { 
+     "title" : "Dependency Inversion in large-scale TypeScript applications with InversifyJS", 
+     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD",
+     "link" : "https://docs.google.com/presentation/d/1JlbSbOjwbBMGEyM4qwVYMjFTYvCxf3waYNvzX0mP1zw/present"
+    }
+   ]
+  },
+  { 
+   "on" : "9th February 2016",
+   "location" : "Aon Centre for Innovation and Analytics (ACIA)",
+   "talks" : [
+    { 
      "title" : "React + Redux + TypeScript === ♥", 
-     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD", 
+     "name" : "Remo H. jansen", "at" : "OweR_ReLoaDeD",
      "link" : "http://www.slideshare.net/RemoJansen/react-redux-typescript" 
     },
     { 
