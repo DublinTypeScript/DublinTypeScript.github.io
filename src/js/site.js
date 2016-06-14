@@ -41,7 +41,7 @@ window.requestAnimFrame = (function(){
       // add a cloud if no clouds and clouds not too close
       if(notEnoughClouds && enoughSpaceBetweenClouds) {
         
-        var $cloud = clouds[cloudSizes[Math.floor(Math.random() * 3)]];
+        var $cloud = $(clouds[cloudSizes[Math.floor(Math.random() * 3)]]);
 
         if (new Date().getMinutes() % 5 === 0) {
           var bg_img = "background: url('./assets/rainbow_cat.png');";
