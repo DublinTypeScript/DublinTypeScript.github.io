@@ -47,7 +47,7 @@ window.requestAnimFrame = (function(){
           var bg_img = "background: url('./assets/rainbow_cat.png');";
           var bg_position = "background-size: contain;";
           var bg_repeat = "background-repeat: no-repeat;";
-          $cloud.attr("style"bg_img + bg_position + bg_repeat);
+          $cloud.attr("style", bg_img + bg_position + bg_repeat);
         }
 
         $('.sky').prepend($cloud);
