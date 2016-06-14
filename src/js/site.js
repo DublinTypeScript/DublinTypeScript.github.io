@@ -8,6 +8,8 @@ window.requestAnimFrame = (function(){
           };
 })();
 
+window.rainbow = false;
+
 (function() {
   
   $("#year").html(new Date().getFullYear());
@@ -43,11 +45,14 @@ window.requestAnimFrame = (function(){
         
         var $cloud = $(clouds[cloudSizes[Math.floor(Math.random() * 3)]]);
 
-        if (new Date().getMinutes() % 5 === 0) {
+        if (new Date().getMinutes() % 5 === 0 && rainbow === false) {
           var bg_img = "background: url('./assets/rainbow_cat.png');";
           var bg_position = "background-size: contain;";
           var bg_repeat = "background-repeat: no-repeat;";
           $cloud.attr("style", bg_img + bg_position + bg_repeat);
+          window.rainbow = true;
+        } else {
+          window.rainbow = false;
         }
 
         $('.sky').prepend($cloud);
