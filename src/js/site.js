@@ -40,7 +40,17 @@ window.requestAnimFrame = (function(){
 
       // add a cloud if no clouds and clouds not too close
       if(notEnoughClouds && enoughSpaceBetweenClouds) {
-        $('.sky').prepend(clouds[cloudSizes[Math.floor(Math.random() * 3)]]);
+        
+        var $cloud = clouds[cloudSizes[Math.floor(Math.random() * 3)]];
+
+        if (new Date().getMinutes() % 5 === 0) {
+          var bg_img = "background: url('./assets/rainbow_cat.png');";
+          var bg_position = "background-size: contain;";
+          var bg_repeat = "background-repeat: no-repeat;";
+          $cloud.attr("style"bg_img + bg_position + bg_repeat);
+        }
+
+        $('.sky').prepend($cloud);
         this.timeSinceLastCloudAdded = 0;
       }
       // if there are clouds
