@@ -1,6 +1,17 @@
 { 
  "events" : [
   { 
+   "on" : "14th June 2016",
+   "location" : "Aon Centre for Innovation and Analytics (ACIA)",
+   "talks" : [
+    { 
+     "title" : "Hands-on workshop on TypeScript + VS Code + React", 
+     "name" : "Remo. H. Jansen", "at" : "#", 
+     "link" : "https://github.com/DublinTypeScript/ts-react-workshop" 
+    }
+   ]
+  },
+  { 
    "on" : "12th April 2016",
    "location" : "Aon Centre for Innovation and Analytics (ACIA)",
    "talks" : [
