@@ -147,22 +147,6 @@ function twitterCard(index, item) {
     });
   });
 
-  // easter egg
-  __konami__.enable(function() {
-    var bg_img = "background: url('./assets/rainbow_cat.png');";
-    var bg_position = "background-size: contain;";
-    var bg_repeat = "background-repeat: no-repeat;";
-    var style = "<style>.cloud{" + bg_img + bg_position + bg_repeat + "}</style>";
-    $("head").append(style);
-  }, { replay: false });
-
   renderTwitterFeed();
 
 })();
-
-$(document).keypress(function(e) {
-    if(e.which === 104) {
-      $(".fadeInUp").hide();
-      $(".fadeInDown").hide();
-    }
-});
