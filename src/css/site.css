@@ -132,3 +132,62 @@ html {
   background-image: none;
   background-repeat: no-repeat;
 }
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #333333;
+    width: 32%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    min-height: 150px;
+    overflow-x: hidden;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+.card a {
+    color: #66c078;
+}
+
+.card a:hover {
+    color: #66c078;
+}
+
+.Emoji {
+    max-width: 25px;
+}
+
+.card-profile {
+    float: left;
+    width: 20%;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.card-profile img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card-content {
+    float: left;
+    width: 80%;
+    padding-left: 10px;
+    overflow-x: hidden;
+}
+
+.card-details{
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.date {
+    font-size: 13px;
+    color: #cccccc;
+}

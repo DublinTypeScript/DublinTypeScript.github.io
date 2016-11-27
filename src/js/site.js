@@ -10,6 +10,38 @@ window.requestAnimFrame = (function(){
 
 window.rainbow = false;
 
+function renderTwitterFeed() {
+    var url = "http://my-cors-proxy.azurewebsites.net/twitrss.me/twitter_user_to_rss/?user=dubtypescript";
+    $.get(url, (html) => {
+        var cards = $(html).find("item").toArray().map(function(item, index) {
+            return twitterCard(index, item)
+        });
+        $("#feed").html(cards.join("")).masonry({ 
+            itemSelector: '.card'
+        });
+    });
+}
+
+function twitterCard(index, item) {
+    var description = $(item).find("description").html();
+    var content = description.split("<![CDATA[").join("").split("]]>").join("");
+    let pubDate = new Date($(item).find("pubDate").text()).toLocaleString();
+    return `
+        <div class="card" data-key="${index}">
+            <div class="card-profile">
+                <img src="./assets/twitter_profile.jpg" />
+            </div>
+            <div class="card-content">
+                ${content}
+            </div>
+            <div style="clear: both;" />
+            <div class="card-details">
+                <div class="date">${pubDate}</div>
+            </div>
+        </div>
+    `;
+}
+
 (function() {
   
   $("#year").html(new Date().getFullYear());
@@ -123,8 +155,10 @@ window.rainbow = false;
     var style = "<style>.cloud{" + bg_img + bg_position + bg_repeat + "}</style>";
     $("head").append(style);
   }, { replay: false });
-})();
 
+  renderTwitterFeed();
+
+})();
 
 $(document).keypress(function(e) {
     if(e.which === 104) {
