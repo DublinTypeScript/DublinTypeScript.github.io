@@ -29,7 +29,7 @@ function twitterCard(index, item) {
     return `
         <div class="card" data-key="${index}">
             <div class="card-profile">
-                <img src="./assets/twitter_profile.jpg" />
+                <img src="./assets/twitter_profile.png" />
             </div>
             <div class="card-content">
                 ${content}
